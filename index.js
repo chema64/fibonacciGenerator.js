@@ -44,4 +44,12 @@ function fibonacciGenerator (n) {
 //Do NOT change any of the code below 👇
 }
 
-fibonacciGenerator (10);
+const btn = document.querySelector("button");
+
+btn.addEventListener("click", handleClick);
+
+function handleClick() {
+  alert("I got clicked");
+  alert(document.querySelector("input").value);
+  document.querySelector("#title").innerHTML = fibonacciGenerator(document.querySelector("input").value);
+}
